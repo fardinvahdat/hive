@@ -12,14 +12,15 @@
                         <Icon v-else :name="item.icon"></Icon>
                     </div>
                     {{
-                item.label }}
+                    item.label }}
                 </NuxtLink>
             </li>
         </ul>
     </div>
     <div class="lg:hidden block">
         <ClientOnly>
-            <el-drawer v-model="drawer" @before-close="drawer = false" lock-scroll size="100%" class="bg-Gray-b2">
+            <el-drawer v-model="drawer" @before-close="drawer = false" lock-scroll :close-delay="100" size="100%"
+                class="bg-Gray-b2">
                 <template #header>
                     <img src="/logo.svg" class="max-w-fit" />
                 </template>
@@ -33,14 +34,15 @@
                                 <Icon v-else :name="item.icon"></Icon>
                             </div>
                             {{
-                item.label }}
+                            item.label }}
                         </NuxtLink>
                     </li>
                 </ul>
             </el-drawer>
         </ClientOnly>
-        <div class="flex items-center justify-between w-full py-4  h-[60px]">
-            <img src="/logo.svg" />
+        <div class="flex items-center justify-between w-full py-4  h-[60px] bg-Gray-b1">
+            <!-- <img src="/logo.svg" /> -->
+            <BaseHeader />
             <button @click="drawer = true" class="mr-6">
                 <Icon name="menu" />
             </button>
