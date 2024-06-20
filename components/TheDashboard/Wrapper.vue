@@ -1,7 +1,9 @@
 <template>
     <div>
-        <TheDashboardWrapper />
+        <TheDashboardHeader />
     </div>
 </template>
+
 <script setup>
+
 </script>
