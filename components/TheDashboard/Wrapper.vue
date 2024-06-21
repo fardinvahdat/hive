@@ -2,6 +2,7 @@
     <div>
         <TheDashboardHeader />
         <TheDashboardMyChannel />
+        <TheDashboardPaperTrading />
     </div>
 </template>
 
