@@ -1,6 +1,7 @@
 <template>
     <div>
         <TheDashboardHeader />
+        <TheDashboardMyChannel />
     </div>
 </template>
 
