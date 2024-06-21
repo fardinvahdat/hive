@@ -5,8 +5,8 @@
             <BaseButton type="secondary">Channel List</BaseButton>
         </header>
         <div class="my-6 p-8 rounded-lg bg-Gray-b2">
-            <div class="flex justify-between items-center">
-                <p class="text-base font-normal">My Channel</p>
+            <div class="flex justify-between items-center border-b-[1px] border-Gray-b1 pb-4">
+                <p class="text-base font-normal">Name of Channel</p>
                 <el-dropdown trigger="click">
                     <span class="el-dropdown-link">
                         <Icon name="more" />

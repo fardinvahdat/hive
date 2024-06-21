@@ -36,7 +36,7 @@
 
                 <!-- first cell  -->
 
-                <div class="min-w-[230px] w-full max-w-[230px] flex flex-col gap-2 sticky left-0 z-30">
+                <div class="min-w-[230px] w-full max-w-[230px] flex flex-col sticky left-0 z-30">
                     <div v-for="(item, index) in state" :key="index">
                         <BaseCellsWithImage :state="item[Object.keys(item)[0]]"
                             class="w-full text-Gray-b6 gap-1 h-[56px] px-4"
@@ -46,7 +46,7 @@
 
                 <!-- cells  -->
 
-                <div class="w-full flex flex-col gap-2 justify-between">
+                <div class="w-full flex flex-col justify-between">
                     <template v-for="(item, index) in state" :key="index">
                         <div class="flex w-full justify-between">
                             <template v-for="(value, key, j) in item" :key="key">
