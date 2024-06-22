@@ -25,9 +25,37 @@
                     </template>
                 </el-dropdown>
             </div>
-            <div class="mt-6 rounded-xl grid grid-cols-4 gap-6">
+            <div class="mt-6 grid grid-cols-4 items-center gap-6">
                 <div class="lg:col-span-3 col-span-4">
-                    <div class="flex flex-wrap md:flex-row flex-col gap-3">
+                    <el-collapse class="block lg:hidden">
+                        <el-collapse-item>
+                            <template #title>Filters</template>
+                            <div class="flex flex-wrap md:flex-row flex-col gap-3">
+                                <div class="min-w-[128px] max-w-[128px] flex flex-col gap-2">
+                                    <label class="text-sm text-Gray-b4 font-normal">Start Balance</label>
+                                    <el-input v-model="filter.balance" placeholder="Start Balance"
+                                        input-style="color:#FFFFFF;font-size:16px" />
+                                </div>
+                                <div class="min-w-[128px] flex flex-col gap-2">
+                                    <label class="text-sm text-Gray-b4 font-normal">Duration</label>
+                                    <ClientOnly>
+                                        <el-date-picker v-model="filter.duration" type="daterange" range-separator="-"
+                                            start-placeholder="Start date" end-placeholder="End date" />
+                                    </ClientOnly>
+                                </div>
+                                <div class="min-w-[128px] max-w-[128px] flex flex-col gap-2">
+                                    <label class="text-sm text-Gray-b4 font-normal">Max Assets</label>
+                                    <el-select v-model="filter.maxAsset" placeholder="Max Assets">
+                                        <el-option v-for="item in options" :key="item.value" :label="item.label"
+                                            :value="item.value" />
+                                    </el-select>
+                                </div>
+                                <div class="min-w-[128px] max-w-[128px] flex flex-col justify-end gap-2">
+                                    <button class="px-2 bg-Blue text-Gray-b6 rounded-lg h-[32px]">Execute</button>
+                                </div>
+                            </div>
+                        </el-collapse-item></el-collapse>
+                    <div class=" flex-wrap md:flex-row flex-col gap-3 lg:flex hidden">
                         <div class="min-w-[128px] max-w-[128px] flex flex-col gap-2">
                             <label class="text-sm text-Gray-b4 font-normal">Start Balance</label>
                             <el-input v-model="filter.balance" placeholder="Start Balance"
@@ -51,10 +79,10 @@
                             <button class="px-2 bg-Blue text-Gray-b6 rounded-lg h-[32px]">Execute</button>
                         </div>
                     </div>
-                    <div class="grid grid-cols-4 mt-6">
+                    <div class="grid grid-cols-4 gap-6 mt-6">
                         <div class="lg:col-span-1 col-span-4">
-                            <div class="mt-4">
-                                <highchart :options="chartOptions" />
+                            <div>
+                                <highchart :options="paperTradingChartOptions" />
                             </div>
                             <div class="flex flex-col gap-2">
                                 <div class="flex justify-between items-center">
@@ -74,6 +102,11 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="lg:col-span-3 col-span-4">
+                            <div>
+                                <highchart :options="paperTradingChartOptions2" />
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="lg:col-span-1 col-span-4">
@@ -86,7 +119,7 @@
 
 <script setup>
 import Icon from '../Icon.vue';
-const { paperTradingChartOptions: chartOptions } = useCharts();
+const { paperTradingChartOptions, paperTradingChartOptions2 } = useCharts();
 
 const filter = ref({
     balance: 0, duration: '', maxAsset: 3
@@ -208,5 +241,12 @@ const balanceChanges = [
 
 .highcharts-credits {
     @apply hidden
+}
+
+.el-collapse-item__header,.el-collapse-item__wrap {
+    @apply bg-transparent text-Gray-b6 text-base
+}
+.el-collapse{
+    @apply border-y-0
 }
 </style>
