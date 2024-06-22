@@ -4,8 +4,9 @@
             <h1 class="text-[14px] font-medium text-Gray-b6">Balance Change <span
                     class="text-xs font-light">((in-time))</span></h1>
         </header>
-        <div class="flex flex-col bg-Gray-b2 gap-4 px-4 py-1 max-h-[271px] overflow-y-auto border-b-[1px] border-Gray-b1 rounded-b-xl">
-            <div v-for="item in state" :key="index" class="grid grid-cols-2 items-center">
+        <div
+            class="flex flex-col bg-Gray-b2 gap-4 px-4 py-1 max-h-[271px] overflow-y-auto border-b-[1px] border-Gray-b1 rounded-b-xl">
+            <div v-for="(item, index) in state" :key="index" class="grid grid-cols-2 items-center">
                 <div class="flex flex-col gap-1">
                     <h5 class="text-[20px] font-light text-Gray-b6">{{ item.firstCol.label }}</h5>
                     <p class="text-[14px] font-normal text-Gray-b6">{{ item.firstCol.value }}</p>

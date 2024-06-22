@@ -364,4 +364,8 @@ const balanceChanges = [
 .el-date-editor.el-input__wrapper {
     @apply max-w-[300px]
 }
+
+.el-loading-spinner .path, .el-loading-spinner .el-loading-text {
+    @apply stroke-Primary text-Primary #{!important};
+}
 </style>
