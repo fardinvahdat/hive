@@ -8,7 +8,7 @@ export default defineNuxtConfig({
       link: [
         {
           rel: "apple-touch-icon",
-          href: "/static/icon.png",
+          href: "/favicon.ico",
           sizes: "180x180",
         },
       ],
@@ -27,7 +27,7 @@ export default defineNuxtConfig({
     "/": { redirect: "/dashboard" },
   },
   pwa: {
-    icon: true,
+    icon: { fileName: "logo.png" },
     meta: {
       /* meta options */
     },
