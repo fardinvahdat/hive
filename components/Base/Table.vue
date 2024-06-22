@@ -9,7 +9,7 @@
                 <!-- first cell  -->
 
                 <div
-                    class="px-4 bg-Gray-b1 rounded-tl-xl h-[56px] flex items-center justify-start min-w-[230px] w-full max-w-[230px] sticky left-0 z-10 text-Gray-b5 text-sm font-normal">
+                    class="px-4 bg-Gray-b1 rounded-tl-xl h-[56px] flex items-center justify-start lg:min-w-[230px] w-full lg:max-w-[230px] min-w-[150px] max-w-[150px] sticky left-0 z-10 text-Gray-b5 text-sm font-normal">
                     {{ headers[0].label }}
                 </div>
 
@@ -36,7 +36,8 @@
 
                 <!-- first cell  -->
 
-                <div class="min-w-[230px] w-full max-w-[230px] flex flex-col sticky left-0 z-30">
+                <div
+                    class="lg:min-w-[230px] w-full lg:max-w-[230px] min-w-[150px] max-w-[150px] flex flex-col sticky left-0 z-30">
                     <div v-for="(item, index) in state" :key="index">
                         <BaseCellsWithImage :state="item[Object.keys(item)[0]]"
                             class="w-full text-Gray-b6 gap-1 h-[56px] px-4"

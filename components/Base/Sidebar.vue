@@ -1,7 +1,7 @@
 <template>
     <div class="h-screen min-w-[224px] max-w-[224px] w-full bg-Gray-b2 hidden lg:block">
         <div class="h-[150px] flex items-center">
-            <img src="/logo.svg" />
+            <NuxtLink to="/dashboard"><img src="/logo.svg" /></NuxtLink>
         </div>
         <ul class="flex flex-col gap-2 h-[calc(100vh-150px)] pl-5">
             <li v-for="(item, index) in list" :key="index" class=" h-[50px]">
@@ -12,7 +12,7 @@
                         <Icon v-else :name="item.icon"></Icon>
                     </div>
                     {{
-                    item.label }}
+                item.label }}
                 </NuxtLink>
             </li>
         </ul>
@@ -34,7 +34,7 @@
                                 <Icon v-else :name="item.icon"></Icon>
                             </div>
                             {{
-                            item.label }}
+                item.label }}
                         </NuxtLink>
                     </li>
                 </ul>

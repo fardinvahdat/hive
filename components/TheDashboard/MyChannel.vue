@@ -1,7 +1,7 @@
 <template>
     <section class="my-6">
         <header class="flex justify-between items-center">
-            <h2 class="text-2xl font-medium">My Channel</h2>
+            <h2 class="xl:text-[26px] lg:text-[22px] text-lg text-Gray-b6">My Channel</h2>
             <BaseButton type="secondary">Channel List</BaseButton>
         </header>
         <div class="my-6 p-8 rounded-lg bg-Gray-b2">
