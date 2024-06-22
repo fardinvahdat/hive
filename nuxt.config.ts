@@ -1,6 +1,19 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  app: {
+    // buildAssetsDir: "/something/",
+    head: {
+      // htmlAttrs: { dir: "rtl", lang: "fa" },
+      link: [
+        {
+          rel: "apple-touch-icon",
+          href: "/static/icon.png",
+          sizes: "180x180",
+        },
+      ],
+    },
+  },
   css: ["~/assets/css/main.css"],
   postcss: {
     plugins: {
