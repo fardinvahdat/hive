@@ -9,7 +9,22 @@ export default defineNuxtConfig({
     },
   },
   modules: ["@pinia/nuxt", "nuxt-highcharts", "@element-plus/nuxt"],
+  buildModules: ["@nuxtjs/pwa"],
   routeRules: {
     "/": { redirect: "/dashboard" },
+  },
+  pwa: {
+    icon: true,
+    meta: {
+      /* meta options */
+    },
+    name: "Hive",
+    author: "Hive Team",
+    theme_color: "#181A1D",
+    manifest: {
+      name: "Hive App",
+      lang: "en",
+      useWebmanifestExtension: false,
+    },
   },
 });
