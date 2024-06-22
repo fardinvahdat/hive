@@ -21,23 +21,61 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: ["@pinia/nuxt", "nuxt-highcharts", "@element-plus/nuxt"],
-  buildModules: ["@nuxtjs/pwa"],
+  modules: [
+    "@pinia/nuxt",
+    "nuxt-highcharts",
+    "@element-plus/nuxt",
+    "@vite-pwa/nuxt",
+  ],
   routeRules: {
     "/": { redirect: "/dashboard" },
   },
   pwa: {
-    icon: { fileName: "logo.png" },
-    meta: {
-      /* meta options */
-    },
-    name: "Hive",
-    author: "Hive Team",
-    theme_color: "#181A1D",
+    /* PWA options */
     manifest: {
-      name: "Hive App",
-      lang: "en",
-      useWebmanifestExtension: false,
+      name: "Hive",
+      short_name: "Hive",
+      description: "Hive PWA",
+      theme_color: "#181A1D",
+      icons: [
+        {
+          src: "favicon.ico",
+          sizes: "192x192",
+          type: "image/png",
+        },
+        {
+          src: "favicon.ico",
+          sizes: "512x512",
+          type: "image/png",
+        },
+        {
+          src: "favicon.ico",
+          sizes: "512x512",
+          type: "image/png",
+          purpose: "any",
+        },
+        {
+          src: "favicon.ico",
+          sizes: "512x512",
+          type: "image/png",
+          purpose: "maskable",
+        },
+      ],
     },
+    workbox: {
+      navigateFallback: "/", // Fallback to index.html
+      globPatterns: [
+        "**/*.{js,css,html,png,jpg,jpeg,svg,woff2,woff,ttf,eot,webmanifest}",
+      ],
+    },
+    client: {
+      installPrompt: true,
+    },
+    registerWebManifestInRouteRules: true,
+    devOptions: {
+      enabled: true,
+      navigateFallbackAllowlist: [/^\/$/],
+    },
+    registerType: "autoUpdate",
   },
 });

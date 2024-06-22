@@ -10,8 +10,8 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxtjs/pwa": "^3.3.5",
     "@pinia/nuxt": "^0.5.1",
+    "@vite-pwa/nuxt": "^0.8.1",
     "nuxt": "^3.12.2",
     "nuxt-highcharts": "^3.1.1",
     "pinia": "^2.1.7",
