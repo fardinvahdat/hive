@@ -11,6 +11,10 @@ export default defineNuxtConfig({
           href: "/favicon.ico",
           sizes: "180x180",
         },
+        {
+          rel: "manifest",
+          href: "/manifest.json",
+        },
       ],
     },
   },
