@@ -8,7 +8,7 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: ["@pinia/nuxt", "@element-plus/nuxt"],
+  modules: ["@pinia/nuxt", "nuxt-highcharts", "@element-plus/nuxt"],
   routeRules: {
     "/": { redirect: "/dashboard" },
   },
