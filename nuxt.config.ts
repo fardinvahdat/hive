@@ -11,11 +11,16 @@ export default defineNuxtConfig({
           href: "/favicon.ico",
           sizes: "180x180",
         },
-        // {
-        //   rel: "manifest",
-        //   href: "/manifest.json",
-        // },
       ],
+      meta: [
+        {
+          name: "theme-color",
+        },
+      ],
+      // {
+      //   rel: "manifest",
+      //   href: "/manifest.json",
+      // },
     },
   },
   css: ["~/assets/css/main.css"],
@@ -37,6 +42,11 @@ export default defineNuxtConfig({
   },
   pwa: {
     /* PWA options */
+    meta: {
+      theme_color: "#181A1D", // Set your desired theme color here
+      name: "Hive",
+      author: "Hive",
+    },
     manifest: {
       name: "Hive",
       short_name: "Hive",
