@@ -11,72 +11,11 @@ export default defineNuxtConfig({
           href: "/favicon.ico",
           sizes: "180x180",
         },
-        // { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
         {
           rel: "apple-touch-startup-image",
           href: "/splash.png",
           media:
-            "(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)",
-        },
-        {
-          rel: "apple-touch-startup-image",
-          href: "/splash.png",
-          media:
-            "(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)",
-        },
-        {
-          rel: "apple-touch-startup-image",
-          href: "/splash.png",
-          media:
-            "(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)",
-        },
-        {
-          rel: "apple-touch-startup-image",
-          href: "/splash.png",
-          media:
-            "(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)",
-        },
-        {
-          rel: "apple-touch-startup-image",
-          href: "/splash.png",
-          media:
-            "(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)",
-        },
-        {
-          rel: "apple-touch-startup-image",
-          href: "/splash.png",
-          media:
-            "(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)",
-        },
-        {
-          rel: "apple-touch-startup-image",
-          href: "/splash.png",
-          media:
-            "(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)",
-        },
-        {
-          rel: "apple-touch-startup-image",
-          href: "/splash.png",
-          media:
-            "(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)",
-        },
-        {
-          rel: "apple-touch-startup-image",
-          href: "/splash.png",
-          media:
-            "(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)",
-        },
-        {
-          rel: "apple-touch-startup-image",
-          href: "/splash.png",
-          media:
-            "(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)",
-        },
-        {
-          rel: "apple-touch-startup-image",
-          href: "/splash.png",
-          media:
-            "(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)",
+            "(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)",
         },
         {
           rel: "apple-touch-startup-image",
@@ -88,26 +27,38 @@ export default defineNuxtConfig({
           rel: "apple-touch-startup-image",
           href: "/splash.png",
           media:
-            "(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)",
+            "(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)",
+        },
+        {
+          rel: "apple-touch-startup-image",
+          href: "/splash.png",
+          media:
+            "(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)",
+        },
+        {
+          rel: "apple-touch-startup-image",
+          href: "/splash.png",
+          media:
+            "(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)",
         },
       ],
       meta: [
         {
           name: "theme-color",
         },
-        // { charset: "utf-8" },
-        // {
-        //   name: "viewport",
-        //   content: "initial-scale=1.0, user-scalable=no, width=device-width",
-        // },
-        // { name: "mobile-web-app-capable", content: "yes" },
-        // { name: "apple-touch-fullscreen", content: "yes" },
-        // { name: "apple-mobile-web-app-capable", content: "yes" },
+        {
+          name: "apple-mobile-web-app-capable",
+          content: "yes",
+        },
+        {
+          name: "apple-mobile-web-app-status-bar-style",
+          content: "default",
+        },
+        {
+          name: "apple-mobile-web-app-title",
+          content: "PWA Splash",
+        },
       ],
-      // {
-      //   rel: "manifest",
-      //   href: "/manifest.json",
-      // },
     },
   },
   css: ["~/assets/css/main.css"],
