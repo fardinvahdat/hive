@@ -42,7 +42,7 @@ export default defineNuxtConfig({
       theme_color: "#181A1D", // Set your desired theme color here
       name: "Hive",
       author: "Hive",
-      mobileAppIOS: true,
+      mobileAppIOS: false,
     },
     manifest: {
       name: "Hive",
