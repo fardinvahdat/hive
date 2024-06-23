@@ -329,5 +329,6 @@ export default defineNuxtConfig({
     icon: {
       iosSizes: [],
     },
+    appleMobileWebAppCapable: true,
   },
 });
