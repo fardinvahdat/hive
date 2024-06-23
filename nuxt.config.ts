@@ -11,14 +11,22 @@ export default defineNuxtConfig({
           href: "/favicon.ico",
           sizes: "180x180",
         },
-        {
-          rel: "apple-touch-startup-image",
-          href: "/splash.png",
-        },
       ],
       meta: [
         {
           name: "theme-color",
+        },
+        {
+          name: "apple-mobile-web-app-capable",
+          content: "yes",
+        },
+        {
+          name: "apple-mobile-web-app-status-bar-style",
+          content: "default",
+        },
+        {
+          name: "apple-mobile-web-app-title",
+          content: "PWA Splash",
         },
       ],
     },
