@@ -8,7 +8,7 @@ nuxtApp.hook("page:finish", () => {
         setTimeout(() => {
 
             useUiStore().setPageLoader(false)
-        }, 4000);
+        }, 2000);
     }
 });
 
@@ -29,7 +29,6 @@ export default {
     },
     watch: {
         showLoader(newVal, oldVal) {
-            debugger
             if (newVal == true) {
                 this.$refs.progressBar.style.opacity = '1';
                 this.$refs.progressBar.style.transitionDuration = '1000ms';
@@ -38,9 +37,11 @@ export default {
                 this.$refs.progressBar.style.transitionDuration = '1000ms';
                 this.$refs.progressBar.style.width = '100%';
                 setTimeout(() => {
-                    this.$refs.progressBar.style.opacity = '0';
-                    this.$refs.progressBar.style.transitionDuration = '0ms';
-                    this.$refs.progressBar.style.width = '0%';
+                    if (this.$refs.progressBar.style) {
+                        this.$refs.progressBar.style.opacity = '0';
+                        this.$refs.progressBar.style.transitionDuration = '0ms';
+                        this.$refs.progressBar.style.width = '0%';
+                    }
                 }, 1000);
             }
         },
