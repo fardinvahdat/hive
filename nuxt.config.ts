@@ -16,6 +16,10 @@ export default defineNuxtConfig({
         {
           name: "theme-color",
         },
+        {
+          name: "apple-mobile-web-app-capable",
+          content: "yes",
+        },
       ],
       // {
       //   rel: "manifest",
@@ -46,7 +50,7 @@ export default defineNuxtConfig({
       theme_color: "#181A1D", // Set your desired theme color here
       name: "Hive",
       author: "Hive",
-      mobileAppIOS: false,
+      mobileAppIOS: true,
     },
     manifest: {
       name: "Hive",
