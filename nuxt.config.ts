@@ -11,10 +11,10 @@ export default defineNuxtConfig({
           href: "/favicon.ico",
           sizes: "180x180",
         },
-        {
-          rel: "manifest",
-          href: "/manifest.json",
-        },
+        // {
+        //   rel: "manifest",
+        //   href: "/manifest.json",
+        // },
       ],
     },
   },
@@ -33,7 +33,7 @@ export default defineNuxtConfig({
   ],
   routeRules: {
     "/": { prerender: true, redirect: "/dashboard" },
-    "/dashboard": { prerender: true, swr: true},
+    "/dashboard": { prerender: true, swr: true },
   },
   pwa: {
     /* PWA options */
@@ -68,7 +68,7 @@ export default defineNuxtConfig({
       ],
     },
     workbox: {
-      navigateFallback: "/", // Fallback to index.html
+      navigateFallback: "/dashboard", // Fallback to index.html
       globPatterns: [
         "**/*.{js,css,html,png,jpg,jpeg,svg,woff2,woff,ttf,eot,webmanifest}",
       ],
@@ -80,6 +80,7 @@ export default defineNuxtConfig({
     devOptions: {
       enabled: true,
       navigateFallbackAllowlist: [/^\/$/],
+      navigateFallback: "/dashboard",
     },
     registerType: "autoUpdate",
   },
