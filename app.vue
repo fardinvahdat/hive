@@ -1,7 +1,8 @@
 <template>
     <div>
         <NuxtPwaAssets />
-        <NuxtLoadingIndicator /><pwa-splash-screen-image :src="$pwaIcons?.splash" />
+        <NuxtLoadingIndicator />
+        <pwa-splash-screen-image src="/splash.png" />
         <NuxtLayout>
             <NuxtPage />
         </NuxtLayout>
