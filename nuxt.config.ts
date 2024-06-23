@@ -11,7 +11,7 @@ export default defineNuxtConfig({
           href: "/favicon.ico",
           sizes: "180x180",
         },
-        { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+        // { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
         {
           rel: "apple-touch-startup-image",
           href: "/splash.png",
@@ -95,14 +95,14 @@ export default defineNuxtConfig({
         {
           name: "theme-color",
         },
-        { charset: "utf-8" },
-        {
-          name: "viewport",
-          content: "initial-scale=1.0, user-scalable=no, width=device-width",
-        },
-        { name: "mobile-web-app-capable", content: "yes" },
-        { name: "apple-touch-fullscreen", content: "yes" },
-        { name: "apple-mobile-web-app-capable", content: "yes" },
+        // { charset: "utf-8" },
+        // {
+        //   name: "viewport",
+        //   content: "initial-scale=1.0, user-scalable=no, width=device-width",
+        // },
+        // { name: "mobile-web-app-capable", content: "yes" },
+        // { name: "apple-touch-fullscreen", content: "yes" },
+        // { name: "apple-mobile-web-app-capable", content: "yes" },
       ],
       // {
       //   rel: "manifest",
