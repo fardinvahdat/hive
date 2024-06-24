@@ -182,4 +182,63 @@ const balanceChanges = [
     },
 ]
 const isHeaderVisible = ref(true)
-</script>
+</script><style lang="scss">
+.el-input__wrapper,
+.el-select__wrapper {
+    @apply bg-Gray-b1 border-0 shadow-none hover:shadow-none active:shadow-none focus:shadow-none text-Gray-b6;
+
+    &.is-focus,
+    &.is-hovering:not(.is-focused),
+    &.is-focused {
+        box-shadow: 0 0 0 1px #f8bf2d76 inset;
+    }
+
+
+}
+
+.el-date-editor.el-input__wrapper {
+    @apply shadow-none hover:shadow-none
+}
+
+.el-range-editor.is-active:hover, .el-range-editor.is-active {
+
+    box-shadow: 0 0 0 1px #f8bf2d76 inset;
+}
+
+.el-date-table td.today .el-date-table-cell__text {
+    @apply text-Gray-b1
+}
+
+.el-date-table td.end-date .el-date-table-cell__text,
+.el-date-table td.start-date .el-date-table-cell__text {
+    @apply bg-Primary
+}
+
+.el-date-editor .el-range-input, .el-date-editor .el-range-separator, .el-select__placeholder {
+    @apply text-Gray-b6
+}
+
+.el-date-table td.available:hover, .el-select-dropdown__item.is-selected {
+    @apply text-Primary
+}
+
+.highcharts-credits {
+    @apply hidden
+}
+
+.el-collapse-item__header, .el-collapse-item__wrap {
+    @apply bg-transparent text-Gray-b6 text-base
+}
+
+.el-collapse {
+    @apply border-y-0
+}
+
+.el-date-editor.el-input__wrapper {
+    @apply max-w-[300px]
+}
+
+.el-loading-spinner .path, .el-loading-spinner .el-loading-text {
+    @apply stroke-Primary text-Primary #{!important};
+}
+</style>
