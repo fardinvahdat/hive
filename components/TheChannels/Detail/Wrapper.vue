@@ -15,8 +15,8 @@
                 </div>
                 <BaseButton class="w-full !rounded-lg" :type="state.isSubscribed ? 'primary' : 'primary-outline'"
                     @click="state.isSubscribed = !state.isSubscribed">{{
-                    state.isSubscribed ? 'Subscribed' :
-                    'Subscrib' }}</BaseButton>
+            state.isSubscribed ? 'Subscribed' :
+                'Subscrib' }}</BaseButton>
             </div>
             <div class="lg:col-span-2 col-span-3 lg:p-4">
                 <div class="flex justify-between items-center lg:flex-row flex-col lg:gap-0 gap-6">
@@ -47,7 +47,8 @@
                     </div>
                 </div>
                 <p class="font-normal text-sm text-Gray-b4 mt-8">Description</p>
-                <p class="font-normal text-sm text-Gray-b4 mt-4">Lorem ipsum dolor sit amet consectetur adipisicing
+                <p class="font-normal text-sm text-Gray-b4 mt-4 text-justify">Lorem ipsum dolor sit amet consectetur
+                    adipisicing
                     elit.
                     Consequatur labore aperiam natus. Qui quas quaerat commodi, id similique nesciunt, iusto veniam ab
                     nostrum assumenda sunt incidunt facilis! Est tenetur quaerat sunt a ea quae quas, dolore iste
@@ -55,6 +56,14 @@
                     voluptatibus, sunt fugiat.</p>
             </div>
         </header>
+        <section class="bg-Gray-b2 rounded-lg lg:p-8 p-4 my-6">
+            <el-tabs v-model="activeName" class="demo-tabs">
+                <el-tab-pane label="Back Testing" name="first">
+                    <TheChannelsDetailBackTesting />
+                </el-tab-pane>
+                <el-tab-pane label="Paper Testing" name="second">Paper Testing</el-tab-pane>
+            </el-tabs>
+        </section>
     </div>
 </template>
 
@@ -67,8 +76,26 @@ const breadcrumbs = computed(() => [
         label: "Channels", route: "/channels"
     },
     {
-        label: `Channel ${route.params.id}`, route: route.fullPath
+        label: `${state?.title}`, route: route.fullPath
     }
 ])
 const state = channels.filter((item) => item.id == route.params.id)[0]
+const activeName = ref('first')
 </script>
+<style lang="scss">
+.el-tabs__item {
+    @apply text-Gray-b4 text-[14px] font-medium hover:text-Gray-b6;
+
+    &.is-active {
+        @apply text-Gray-b6
+    }
+}
+
+.el-tabs__nav-wrap:after {
+    @apply bg-Gray-b3
+}
+
+.el-tabs__active-bar {
+    @apply bg-Primary
+}
+</style>

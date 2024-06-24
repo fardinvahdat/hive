@@ -334,6 +334,12 @@
                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
         </template>
+        <template v-else-if="name == 'close'">
+            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.499 1.5L1.49902 15.5" stroke="#181A1D" stroke-width="3" />
+                <path d="M1.49902 1.5L15.499 15.5" stroke="#181A1D" stroke-width="3" />
+            </svg>
+        </template>
     </div>
 </template>
 
