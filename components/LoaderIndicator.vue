@@ -30,14 +30,16 @@ export default {
     watch: {
         showLoader(newVal, oldVal) {
             if (newVal == true) {
-                this.$refs.progressBar.style.opacity = '1';
-                this.$refs.progressBar.style.transitionDuration = '1000ms';
-                this.$refs.progressBar.style.width = '40%';
+                if (this.$refs.progressBar?.style) {
+                    this.$refs.progressBar.style.opacity = '1';
+                    this.$refs.progressBar.style.transitionDuration = '1000ms';
+                    this.$refs.progressBar.style.width = '40%';
+                }
             } else if (newVal == false) {
                 this.$refs.progressBar.style.transitionDuration = '1000ms';
                 this.$refs.progressBar.style.width = '100%';
                 setTimeout(() => {
-                    if (this.$refs.progressBar.style) {
+                    if (this.$refs.progressBar?.style) {
                         this.$refs.progressBar.style.opacity = '0';
                         this.$refs.progressBar.style.transitionDuration = '0ms';
                         this.$refs.progressBar.style.width = '0%';

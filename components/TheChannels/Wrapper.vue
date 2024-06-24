@@ -1,0 +1,13 @@
+<template>
+    <div class="my-1">
+        <h2 class="font-medium xl:text-[46px] lg:text-[30px] text-lg text-Gray-b6">Channels</h2>
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-6 my-6">
+            <BaseCard v-for="(item, index) in channels" :key="index" :state="item" />
+        </div>
+    </div>
+</template>
+
+<script setup>
+import { useChannelsStore } from '@/stores/channels'
+const { channels } = useChannelsStore()
+</script>
