@@ -328,6 +328,12 @@
                     fill="#181A1D" />
             </svg>
         </template>
+        <template v-else-if="name == 'angle-right'">
+            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.7" d="M1.06396 1.28522L5.57196 6.14606L1.06396 10.6392" stroke="#F8C02D"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </template>
     </div>
 </template>
 
