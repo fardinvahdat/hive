@@ -2,7 +2,9 @@
     <div class="bg-Gray-b2 rounded-lg flex flex-col">
         <header class="background-gradiant h-[173px] rounded-lg p-4 flex flex-col justify-end"
             :style="`background-color:${state.background}`">
-            <h3 class="font-medium text-[20px] text-Gray-b6">{{ state.title }}</h3>
+            <NuxtLink :to="`/channels/${state.id}`">
+                <h3 class="font-medium text-[20px] text-Gray-b6">{{ state.title }}</h3>
+            </NuxtLink>
             <p class="text-sm text-Gray-b5 font-medium">{{ state.caption }}</p>
         </header>
         <div class="flex flex-col gap-6 p-4">
@@ -35,11 +37,14 @@
                 </div>
             </div>
             <div class="flex flex-col gap-2">
-                <BaseButton class="w-full !rounded-lg" :type="state.isSubscribed ? 'primary' : 'primary-outline'">{{
+                <BaseButton class="w-full !rounded-lg" :type="state.isSubscribed ? 'primary' : 'primary-outline'"
+                    @click="state.isSubscribed = !state.isSubscribed">{{
                 state.isSubscribed ? 'Subscribed' :
                     'Subscrib' }}</BaseButton>
-                <BaseButton class="w-full !rounded-lg !border-Gray-b4 !text-Gray-b4 !bg-transparent !text-sm">Learn
-                    More</BaseButton>
+                <NuxtLink :to="`/channels/${state.id}`">
+                    <BaseButton class="w-full !rounded-lg !border-Gray-b4 !text-Gray-b4 !bg-transparent !text-sm">Learn
+                        More</BaseButton>
+                </NuxtLink>
             </div>
         </div>
     </div>

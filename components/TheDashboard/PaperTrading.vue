@@ -2,7 +2,9 @@
     <section class="my-6">
         <header class="flex justify-between items-center">
             <h2 class="xl:text-[26px] lg:text-[22px] text-lg text-Gray-b6">Paper Trading</h2>
-            <BaseButton type="secondary">Channel List</BaseButton>
+            <NuxtLink to="/channels">
+                <BaseButton type="secondary">Channel List</BaseButton>
+            </NuxtLink>
         </header>
         <div class="my-6 p-8 rounded-lg bg-Gray-b2">
             <div class="flex justify-between items-center border-b-[1px] border-Gray-b1 pb-4">
