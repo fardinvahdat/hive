@@ -70,10 +70,3 @@ const color = computed(() => {
   return "#ff0000"
 });
 </script>
-<style>
-.line-less .highcharts-credits,
-.line-less .highcharts-grid-line,
-.line-less .highcharts-yaxis-grid {
-  display: none;
-}
-</style>

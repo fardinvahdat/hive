@@ -69,8 +69,3 @@ const props = defineProps({
     }
 })
 </script>
-<style>
-.background-gradiant {
-    background: linear-gradient(240.39deg, rgba(30, 36, 41, 0) 37.45%, rgba(30, 36, 41, 0.741) 91.77%);
-}
-</style>

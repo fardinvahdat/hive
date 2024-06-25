@@ -32,8 +32,3 @@ const props = defineProps({
     }
 })
 </script>
-<style>
-.widget {
-    background: linear-gradient(197.86deg, #65590A -10.03%, #342A17 105.76%);
-}
-</style>

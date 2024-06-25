@@ -82,20 +82,3 @@ const breadcrumbs = computed(() => [
 const state = channels.filter((item) => item.id == route.params.id)[0]
 const activeName = ref('first')
 </script>
-<style lang="scss">
-.el-tabs__item {
-    @apply text-Gray-b4 text-[14px] font-medium hover:text-Gray-b6;
-
-    &.is-active {
-        @apply text-Gray-b6
-    }
-}
-
-.el-tabs__nav-wrap:after {
-    @apply bg-Gray-b3
-}
-
-.el-tabs__active-bar {
-    @apply bg-Primary
-}
-</style>
