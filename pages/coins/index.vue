@@ -1,8 +1,6 @@
 <template>
     <div>
-        <h1 class="text-3xl font-bold underline">
-            coins
-        </h1>
+        <TheCoinsWrapper />
     </div>
 </template>
 <script setup>

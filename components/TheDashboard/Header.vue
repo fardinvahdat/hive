@@ -1,7 +1,7 @@
 <template>
     <div class="grid lg:grid-cols-3 gap-4">
-        <div class="flex flex-col gap-4">
-            <h2 class="font-medium xl:text-[46px] lg:text-[30px] text-lg text-Gray-b6 my-1">Dashboard</h2>
+        <div class="flex flex-col lg:gap-4 gap-1">
+            <h2 class="font-medium xl:text-[34px] lg:text-[24px] text-lg text-Gray-b6 lg:my-1">Dashboard</h2>
             <p class="lg:text-base text-sm text-Gray-b6 font-light">Workspace Board</p>
             <div class="flex gap-2">
                 <Icon name="sell" />

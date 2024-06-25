@@ -340,6 +340,14 @@
                 <path d="M1.49902 1.5L15.499 15.5" stroke="#181A1D" stroke-width="3" />
             </svg>
         </template>
+        <template v-else-if="name == 'search'">
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M5.0001 9.14997C7.29208 9.14997 9.1501 7.29196 9.1501 4.99998C9.1501 2.70799 7.29208 0.849976 5.0001 0.849976C2.70812 0.849976 0.850098 2.70799 0.850098 4.99998C0.850098 7.29196 2.70812 9.14997 5.0001 9.14997Z"
+                    stroke="#ADAEB0" stroke-width="1.7" stroke-linecap="round" />
+                <path d="M8.14209 8.14203L11.3521 11.352" stroke="#ADAEB0" stroke-width="1.7" stroke-linecap="round" />
+            </svg>
+        </template>
     </div>
 </template>
 

@@ -6,7 +6,7 @@
                 <BaseButton type="secondary">Channel List</BaseButton>
             </NuxtLink>
         </header>
-        <div class="my-6 p-8 rounded-lg bg-Gray-b2">
+        <div class="my-6 lg:p-8 p-4 rounded-lg bg-Gray-b2">
             <div class="flex justify-between items-center border-b-[1px] border-Gray-b1 pb-4">
                 <p class="md:text-base text-sm font-normal">Name of Channel</p>
                 <el-dropdown trigger="click">
@@ -116,7 +116,7 @@
                 </div>
             </div>
         </div>
-        <div class="my-6 p-8 rounded-lg bg-Gray-b2">
+        <div class="my-6 lg:p-8 p-4 rounded-lg bg-Gray-b2">
             <div class="flex justify-between items-center border-b-[1px] border-Gray-b1 pb-4">
                 <p class="md:text-base text-sm font-normal">Name of Channel</p>
                 <el-dropdown trigger="click">
