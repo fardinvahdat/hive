@@ -1,9 +1,8 @@
 <template>
     <div>
-        {{ route.params.id }}
+        <TheCoinsDetailWrapper />
     </div>
 </template>
 
 <script setup>
-const route = useRoute()
 </script>
