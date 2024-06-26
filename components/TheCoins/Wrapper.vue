@@ -12,12 +12,17 @@
                 <input v-model="search" placeholder="Search ..." class="border-0 bg-transparent outline-none w-full" />
             </div>
         </header>
-        <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-6 my-6">
-
+        <div class="my-6">
+            <div class="border-[1px] rounded-xl border-Gray-b1 lg:p-8 p-4 bg-Gray-b2">
+                <BaseTable :headers="headers" :state="coins" />
+            </div>
         </div>
     </div>
 </template>
 
 <script setup>
 const search = ref("")
+import { useCoinsStore } from '@/stores/coins'
+
+const { coins, headers } = useCoinsStore()
 </script>

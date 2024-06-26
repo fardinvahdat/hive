@@ -8,8 +8,8 @@
 
                 <!-- first cell  -->
 
-                <div
-                    class="px-4 bg-Gray-b1 rounded-tl-xl h-[56px] flex items-center justify-start lg:min-w-[230px] w-full lg:max-w-[230px] min-w-[150px] max-w-[150px] sticky left-0 z-10 text-Gray-b5 text-sm font-normal">
+                <div class="px-4 bg-Gray-b1 rounded-tl-xl h-[56px] flex items-center justify-start sticky left-0 z-10 text-Gray-b5 text-sm font-normal"
+                    :class="state[0][Object.keys(state[0])[0]].type == 'with-image' ? 'lg:min-w-[230px] w-full lg:max-w-[230px] min-w-[150px] max-w-[150px]' : 'w-full min-w-[100px] max-w-[100px]'">
                     {{ headers[0].label }}
                 </div>
 
@@ -36,12 +36,17 @@
 
                 <!-- first cell  -->
 
-                <div
-                    class="lg:min-w-[230px] w-full lg:max-w-[230px] min-w-[150px] max-w-[150px] flex flex-col sticky left-0 z-30">
+                <div class="flex flex-col sticky left-0 z-30"
+                    :class="state[0][Object.keys(state[0])[0]].type == 'with-image' ? 'lg:min-w-[230px] w-full lg:max-w-[230px] min-w-[150px] max-w-[150px]' : 'w-full min-w-[100px] max-w-[100px]'">
                     <div v-for="(item, index) in state" :key="index">
                         <BaseCellsWithImage :state="item[Object.keys(item)[0]]"
                             class="w-full text-Gray-b6 gap-1 h-[56px] px-4"
-                            :class="index % 2 == 0 ? 'bg-Gray-b2' : 'bg-Gray-b1'" />
+                            :class="index % 2 == 0 ? 'bg-Gray-b2' : 'bg-Gray-b1'"
+                            v-if="item[Object.keys(item)[0]].type == 'with-image'" />
+                        <BaseCellsFavorite :state="item[Object.keys(item)[0]]" :index="index"
+                            class="w-full text-Gray-b6 gap-1 h-[56px] px-4"
+                            :class="index % 2 == 0 ? 'bg-Gray-b2' : 'bg-Gray-b1'"
+                            v-else-if="item[Object.keys(item)[0]].type == 'favorite'" />
                     </div>
                 </div>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="line-less relative -z-10">
+  <div class="line-less">
     <highchart :options="chartOptions" />
   </div>
 </template>
@@ -11,6 +11,7 @@ const chartOptions = computed(() => {
     chart: {
       type: "line",
       height: 55,
+      backgroundColor: "transparent",
     },
     title: {
       text: "",
@@ -40,7 +41,7 @@ const chartOptions = computed(() => {
     },
     tooltip: {
       valuePrefix: " ",
-      enabled: true,
+      enabled: false,
       headerFormat: "",
       pointFormat: "",
     },
@@ -70,3 +71,10 @@ const color = computed(() => {
   return "#ff0000"
 });
 </script>
+
+<style lang="scss" scoped>
+.highcharts-credits,
+.highcharts-grid-line {
+  display: none;
+}
+</style>
