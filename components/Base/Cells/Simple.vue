@@ -5,7 +5,10 @@
         <Icon :name="state.icon" />
       </div>
       <h4 class="text-sm font-medium" :style="`color:${colors[state.valueColor].value || colors[0].value}`">
-        {{ state.value }}
+        <template v-if="!state.isLink">
+          {{ state.value }}
+        </template>
+        <NuxtLink v-else :to="`${state.path}${state.id}`">{{ state.value }}</NuxtLink>
       </h4>
     </div>
     <div class="text-sm font-normal" :style="`color:${colors[state.captionColor].value || colors[1].value}`">
@@ -25,6 +28,9 @@ const props = defineProps({
       caption: "",
       valueColor: 0,
       captionColor: 1,
+      id: 0,
+      isLink: false,
+      path: ''
     },
   },
 });

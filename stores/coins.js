@@ -19,6 +19,9 @@ export const useCoinsStore = defineStore("coins", () => {
         caption: "",
         valueColor: 0,
         captionColor: 1,
+        id: 1,
+        isLink: true,
+        path: "/coins/",
       },
       Price: {
         relatedHeaderId: 3,
@@ -104,6 +107,9 @@ export const useCoinsStore = defineStore("coins", () => {
         caption: "",
         valueColor: 0,
         captionColor: 1,
+        id: 2,
+        isLink: true,
+        path: "/coins/",
       },
       Price: {
         relatedHeaderId: 3,
