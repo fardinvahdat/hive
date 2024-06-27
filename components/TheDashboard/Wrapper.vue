@@ -1,5 +1,6 @@
 <template>
-    <div>
+    <div class="my-1">
+        <BaseBanner />
         <TheDashboardHeader />
         <TheDashboardMyChannel />
         <TheDashboardPaperTrading />

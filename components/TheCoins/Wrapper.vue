@@ -1,5 +1,6 @@
 <template>
     <div class="my-1">
+        <BaseBanner />
         <header class="flex lg:items-center justify-between lg:flex-row flex-col lg:gap-0 gap-6">
             <h2 class="font-medium xl:text-[34px] lg:text-[24px] text-lg text-Gray-b6">
                 Today's Coin Prices by Kennstin Hive
