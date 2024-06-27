@@ -1,6 +1,6 @@
 <template>
-    <div class="mt-6 grid grid-cols-4 items-center gap-6">
-        <header class="col-span-4 flex lg:items-center justify-between lg:flex-row flex-col gap-4">
+    <div class="mt-6 grid grid-cols-5 gap-6">
+        <header class="col-span-5 flex lg:items-center justify-between lg:flex-row flex-col gap-4">
             <h2 class="lg:text-2xl text-xl text-Gray-b6 font-medium">Bitcoin Charts</h2>
             <div class="flex items-center gap-2 overflow-x-auto">
                 <BaseButton v-for="(item, index) in showModeList" :key="index" @click="showMode = item.value"
@@ -34,16 +34,16 @@
                 </div>
             </div>
         </header>
-        <div class="col-span-4">
+        <div class="col-span-5">
             <highchart :options="coinsChartOption" />
         </div>
-        <div class="lg:col-span-3 col-span-4 flex flex-col gap-8">
+        <div class="lg:col-span-3 col-span-5 flex flex-col gap-8">
             <div v-for="(item, index) in descriptions" :key="index">
                 <h1 class="lg:text-2xl text-xl font-medium text-Gray-b6 mb-4">{{ item.title }}</h1>
                 <p class="text-Gray-b4 text-base text-justify">{{ item.description }}</p>
             </div>
         </div>
-        <div class="lg:col-span-1 col-span-4">
+        <div class="lg:col-span-2 col-span-5">
             <TheCoinsDetailWidget v-for="(item, index) in widgetBox" :key="index" :header="item.header"
                 :state="item.list" class="mb-6" />
         </div>
