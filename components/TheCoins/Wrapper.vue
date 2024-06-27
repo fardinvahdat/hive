@@ -14,7 +14,7 @@
         </header>
         <div class="my-6">
             <div class="border-[1px] rounded-xl border-Gray-b1 lg:p-8 p-4 bg-Gray-b2">
-                <BaseTable :headers="headers" :state="coins" />
+                <BaseTable :headers="headers" :state="[...coins]" />
             </div>
         </div>
     </div>

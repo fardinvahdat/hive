@@ -4,7 +4,7 @@
             <h2 class="lg:text-2xl text-xl text-Gray-b6 font-medium">Bitcoin Charts</h2>
             <div class="flex items-center gap-2 overflow-x-auto">
                 <BaseButton v-for="(item, index) in showModeList" :key="index" @click="showMode = item.value"
-                    :class="showMode == item.value ? '' : 'bg-transparent text-Gray-b3'">
+                    :class="showMode == item.value ? 'text-Gray-b6' : 'bg-transparent text-Gray-b3'">
                     {{ item.label }}
                 </BaseButton>
             </div>
