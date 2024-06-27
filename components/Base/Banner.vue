@@ -1,5 +1,5 @@
 <template>
-    <div style="background: url(/img/banner-bg.svg) no-repeat;"
+    <div style="background: url(/img/Banner-bg.svg) no-repeat;"
         class="h-[213px] !bg-cover rounded-2xl mb-6 flex flex-col justify-center px-4">
         <h5 class="text-Gray-b6 font-medium lg:text-2xl md:text-xl text-base lg:mb-8 mb-4">GRATZ! You Got <span
                 class="lg:text[48px] md:text-[35px] text-[30px]">23</span> USD with <span class="text-Primary">Channel
