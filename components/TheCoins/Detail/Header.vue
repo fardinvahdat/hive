@@ -71,7 +71,7 @@
 
             </div>
             <div class="lg:col-span-1 col-span-3">
-                <BaseCellsLineChart :series="[13, 40, 25, 70, 9]" />
+                <BaseCellsLineChart :series="state['Last 7 Days'].value" />
             </div>
         </div>
 

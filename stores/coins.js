@@ -1076,6 +1076,35 @@ export const useCoinsStore = defineStore("coins", () => {
     { label: "7d", sortable: true, sortType: 1, align: "end", id: 7 },
     { label: "Last 7 Days", sortable: true, sortType: 1, align: "end", id: 8 },
   ];
-  
-  return { coins, headers };
+  const news = ref([
+    {
+      color: "#8D3434",
+      title:
+        "Bitcoin price at $16K and beyond? Here are the bear and bull cases",
+      author: "Navid JM",
+      date: "1 HOUR AGO",
+    },
+    {
+      color: "#7460CB",
+      title:
+        "Bitcoin price at $16K and beyond? Here are the bear and bull cases",
+      author: "Navid JM",
+      date: "1 HOUR AGO",
+    },
+    {
+      color: "#53858D",
+      title:
+        "Bitcoin price at $16K and beyond? Here are the bear and bull cases",
+      author: "Navid JM",
+      date: "1 HOUR AGO",
+    },
+    {
+      color: "#B2B724",
+      title:
+        "Bitcoin price at $16K and beyond? Here are the bear and bull cases",
+      author: "Navid JM",
+      date: "1 HOUR AGO",
+    },
+  ]);
+  return { coins, headers, news };
 });

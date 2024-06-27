@@ -8,7 +8,7 @@
         <template v-if="!state.isLink">
           {{ state.value }}
         </template>
-        <NuxtLink v-else :to="`${state.path}${state.id}`">{{ state.value }}</NuxtLink>
+        <NuxtLink v-else :to="`${state.path}${state.id}`" class="underline">{{ state.value }}</NuxtLink>
       </h4>
       <div class="text-xs font-normal" :style="`color:${colors[state.captionColor].value || colors[1].value}`">
         {{ state.caption }}

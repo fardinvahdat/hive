@@ -7,7 +7,9 @@
                 <el-tab-pane label="Charts" name="first">
                     <TheCoinsDetailCharts />
                 </el-tab-pane>
-                <el-tab-pane label="News" name="second">News</el-tab-pane>
+                <el-tab-pane label="News" name="second">
+                    <TheCoinsDetailNews />
+                </el-tab-pane>
             </el-tabs>
         </section>
     </div>
