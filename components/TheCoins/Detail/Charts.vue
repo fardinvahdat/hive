@@ -44,7 +44,8 @@
             </div>
         </div>
         <div class="lg:col-span-1 col-span-4">
-            <BaseBalanceChange :state="balanceChanges" />
+            <TheCoinsDetailWidget v-for="(item, index) in widgetBox" :key="index" :header="item.header"
+                :state="item.list" class="mb-6" />
         </div>
     </div>
 </template>
@@ -139,4 +140,113 @@ const balanceChanges = [
         }
     },
 ]
+const widgetBox = ref([
+    {
+        header: 'Bitcoin Price Today',
+        list: [
+            {
+                label: "Bitcoin Price Today",
+                caption: [],
+                values: ['$16,242.06 USD']
+            },
+            {
+                label: "24 Hour",
+                caption: ['High', 'Low'],
+                values: ['$16,463.18 USD', '$16,463.18 USD']
+            },
+            {
+                label: "24 Hour Volume",
+                caption: [],
+                values: ['$32,030,084,496 USD']
+            },
+        ]
+    },
+    {
+        header: "Yesterday's Bitcoin Price",
+        list: [
+            {
+                label: "Bitcoin Price Yesterday's",
+                caption: [],
+                values: ['$16,242.06 USD']
+            },
+            {
+                label: "Yesterday's",
+                caption: ['Open', 'Close'],
+                values: ['$16,463.18 USD', '$16,463.18 USD']
+            },
+            {
+                label: "Yesterday's Change",
+                caption: [],
+                values: ['$575.04 USD', '(3.66%)'],
+                color: '#49DF3E'
+            },
+            {
+                label: "Yesterday's Change",
+                caption: [],
+                values: ['$34,175,758,344 USD']
+            },
+        ]
+    },
+    {
+        header: "Historic Bitcoin Price",
+        list: [
+            {
+                label: "7 Day",
+                caption: ['High', 'Low'],
+                values: ['$16,463.18 USD', '$16,463.18 USD']
+            },
+            {
+                label: "30 Day",
+                caption: ['High', 'Low'],
+                values: ['$16,463.18 USD', '$16,463.18 USD']
+            },
+            {
+                label: "90 Day",
+                caption: ['High', 'Low'],
+                values: ['$16,463.18 USD', '$16,463.18 USD']
+            },
+            {
+                label: "52 Weeks",
+                caption: ['High', 'Low'],
+                values: ['$16,463.18 USD', '$16,463.18 USD']
+            },
+            {
+                label: "All Time High",
+                caption: [],
+                values: ['$16,463.18 USD', '(Dec 17, 2017)']
+            },
+            {
+                label: "All Time Low",
+                caption: [],
+                values: ['$16,463.18 USD', '$16,463.18 USD']
+            },
+            {
+                label: "Bitcoin ROI",
+                caption: [],
+                values: ['> 9000%'],
+                color: '#49DF3E'
+            },
+        ]
+    },
+    {
+        header: "Bitcoin Supply Details",
+        list: [
+            {
+                label: "Circulating Supply",
+                caption: [],
+                values: ['$16,463.18 USD']
+            },
+            {
+                label: "Total Supply",
+                caption: [],
+                values: ['$16,463.18 USD']
+            },
+            {
+                label: "Max Supply",
+                caption: [],
+                values: ['$16,463.18 USD']
+            },
+        ]
+    }
+])
 </script>

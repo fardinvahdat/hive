@@ -1076,5 +1076,6 @@ export const useCoinsStore = defineStore("coins", () => {
     { label: "7d", sortable: true, sortType: 1, align: "end", id: 7 },
     { label: "Last 7 Days", sortable: true, sortType: 1, align: "end", id: 8 },
   ];
+  
   return { coins, headers };
 });
