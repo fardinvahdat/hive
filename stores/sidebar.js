@@ -8,9 +8,9 @@ export const useSidebarStore = defineStore("sidebar", () => {
       route: "/dashboard",
     },
     {
-      label: "Portfolio",
-      icon: "portfolio",
-      route: "/portfolio",
+      label: "Payment",
+      icon: "payment",
+      route: "/payment",
     },
     {
       label: "Coins",

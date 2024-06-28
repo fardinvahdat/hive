@@ -98,3 +98,9 @@
 .widget {
     background: linear-gradient(197.86deg, #65590A -10.03%, #342A17 105.76%) !important;
 }
+.el-select-dropdown__footer .option-input .el-input__wrapper {
+    @apply h-[50px] rounded-xl text-Gray-b5 #{!important};
+    .el-input__inner{
+        @apply text-Gray-b5
+    }
+}

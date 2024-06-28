@@ -8,7 +8,7 @@ nuxtApp.hook("page:finish", () => {
         setTimeout(() => {
 
             useUiStore().setPageLoader(false)
-        }, 2000);
+        }, 1000);
     }
 });
 
