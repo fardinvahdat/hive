@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="countdown-circle relative" v-if="remainTime != -1">
+        <div class="countdown-circle relative" v-if="remainTime > 0">
             <span class="absolute top-9 left-6">
                 {{ minutes.toString().padStart(2, '0') }} : {{ seconds.toString().padStart(2, '0') }}
             </span>
