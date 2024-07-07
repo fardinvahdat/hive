@@ -83,7 +83,7 @@ export default defineNuxtConfig({
     "@vite-pwa/nuxt",
   ],
   routeRules: {
-    "/": { prerender: true, redirect: "/dashboard" },
+    "/": { prerender: true, redirect: "/steps" },
     "/dashboard": { prerender: true, swr: true },
   },
   pwa: {

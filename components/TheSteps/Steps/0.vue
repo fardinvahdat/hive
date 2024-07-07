@@ -6,11 +6,7 @@
         </div>
     </template>
     <template v-else>
-        <div class="flex flex-col justify-center gap-6">
-            <div>
-                <img src="/logo.svg" alt="hive" class="max-w-[200px]" />
-            </div>
-            <TheStepsStepsStepper />
+        <div class="flex flex-col justify-center gap-6 w-full">
             <h6 class="lg:text-xl text-lg text-Gray-b6 font-medium">Only 9 Step to personalize suggestions</h6>
             <p class="lg:text-base text-sm text-Gray-b4 font-medium">There is some Questions that knowing them make
                 our suggestions better custom for your wallet and your life-style.

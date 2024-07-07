@@ -1,5 +1,5 @@
 <template>
-    <div class="flex lg:flex-row flex-col" v-if="isLoading">
+    <div class="flex lg:flex-row flex-col" v-if="isLoaded">
         <LoaderIndicator />
         <BaseSidebar />
         <div
@@ -47,12 +47,10 @@
 </template>
 
 <script setup>
-const isLoading = ref(false)
+const isLoaded = ref(false)
 
 onMounted(() => {
-    setTimeout(() => {
-        isLoading.value = true
-    }, 2000);
+    isLoaded.value = true
 })
 </script>
 <style>

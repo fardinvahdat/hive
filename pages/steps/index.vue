@@ -1,5 +1,5 @@
 <template>
-    <div class="max-h-[calc(100vh-60px)] min-h-[calc(100vh-60px)] h-full lg:max-w-[500px] w-full m-auto flex items-center">
+    <div class="min-h-[calc(100vh-60px)] h-full lg:max-w-[1000px] w-full m-auto flex items-center justify-center">
         <TheStepsWrapper />
     </div>
 </template>
