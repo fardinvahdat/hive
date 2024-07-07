@@ -1,5 +1,5 @@
 <template>
-    <div class="flex lg:flex-row flex-col" v-if="$pwa.swActivated">
+    <div class="flex lg:flex-row flex-col" v-if="isLoading">
         <LoaderIndicator />
         <BaseSidebar />
         <div
@@ -41,13 +41,19 @@
             </div>
         </ClientOnly>
     </div>
-    <div v-else>
-        Application is pending...
+    <div class="h-screen w-screen flex items-center justify-center" v-else>
+        <img src="/splash.png" class="max-w-[400px] object-contain" />
     </div>
 </template>
 
 <script setup>
-const { swActivated } = useNuxtApp().$pwa;
+const isLoading = ref(false)
+
+onMounted(() => {
+    setTimeout(() => {
+        isLoading.value = true
+    }, 2000);
+})
 </script>
 <style>
 .pwa-toast {
