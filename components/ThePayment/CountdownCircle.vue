@@ -32,7 +32,9 @@ onMounted(() => {
             clearInterval(interval);
         } else {
             const progress = ((endTime.value - currentTime) / (endTime.value - startTime.value)) * 100;
-            progressBar.value.style.strokeDasharray = `${progress} 100`;
+            if (progressBar.value) {
+                progressBar.value.style.strokeDasharray = `${progress} 100`;
+            }
         }
         remainTime.value = Math.floor((endTime.value - currentTime) / 1000)
     }, 1000);
