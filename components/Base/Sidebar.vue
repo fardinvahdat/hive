@@ -1,7 +1,9 @@
 <template>
     <div class="h-screen min-w-[224px] max-w-[224px] w-full bg-Gray-b2 hidden lg:block">
-        <div class="h-[150px] flex items-center">
-            <NuxtLink to="/dashboard"><img src="/logo.svg" /></NuxtLink>
+        <div class="h-[150px] flex items-center justify-center">
+            <NuxtLink to="/dashboard">
+                <img src="/logo.svg" class="max-w-[150px]" />
+            </NuxtLink>
         </div>
         <ul class="flex flex-col gap-2 h-[calc(100vh-150px)] pl-5">
             <li v-for="(item, index) in list" :key="index" class=" h-[50px]">
@@ -22,7 +24,7 @@
             <el-drawer v-model="drawer" @before-close="drawer = false" lock-scroll :close-delay="100" size="100%"
                 class="bg-Gray-b2">
                 <template #header>
-                    <img src="/logo.svg" class="max-w-fit" />
+                    <img src="/logo.svg" class="max-w-[200px]" />
                 </template>
                 <ul class="flex flex-col gap-2 h-full pl-5">
                     <li v-for="(item, index) in list" :key="index" class=" h-[50px]">
