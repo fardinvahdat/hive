@@ -1,5 +1,5 @@
 <template>
-    <div class="flex lg:flex-row flex-col">
+    <div class="flex lg:flex-row flex-col" v-if="$pwa.swActivated">
         <LoaderIndicator />
         <BaseSidebar />
         <div
@@ -41,10 +41,13 @@
             </div>
         </ClientOnly>
     </div>
+    <div v-else>
+        Application is pending...
+    </div>
 </template>
 
 <script setup>
-
+const { swActivated } = useNuxtApp().$pwa;
 </script>
 <style>
 .pwa-toast {
