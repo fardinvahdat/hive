@@ -29,8 +29,8 @@
             </div>
             <div class="mt-6 grid grid-cols-4 items-center gap-6">
                 <div class="lg:col-span-3 col-span-4">
-                    <el-collapse class="block lg:hidden">
-                        <el-collapse-item>
+                    <el-collapse class="block lg:hidden" v-model="activeAccordion1" accordion>
+                        <el-collapse-item name="1">
                             <template #title>Filters</template>
                             <div class="flex flex-wrap md:flex-row flex-col gap-3">
                                 <div class="min-w-[128px] max-w-[128px] flex flex-col gap-2">
@@ -56,7 +56,8 @@
                                     <button class="px-2 bg-Blue text-Gray-b6 rounded-lg h-[32px]">Execute</button>
                                 </div>
                             </div>
-                        </el-collapse-item></el-collapse>
+                        </el-collapse-item>
+                    </el-collapse>
                     <div class=" flex-wrap md:flex-row flex-col gap-3 lg:flex hidden">
                         <div class="min-w-[128px] max-w-[128px] flex flex-col gap-2">
                             <label class="text-sm text-Gray-b4 font-normal">Start Balance</label>
@@ -139,8 +140,8 @@
             </div>
             <div class="mt-6 grid grid-cols-4 items-center gap-6">
                 <div class="lg:col-span-3 col-span-4">
-                    <el-collapse class="block lg:hidden">
-                        <el-collapse-item>
+                    <el-collapse class="block lg:hidden" v-model="activeAccordion2" accordion>
+                        <el-collapse-item name="1">
                             <template #title>Filters</template>
                             <div class="flex flex-wrap md:flex-row flex-col gap-3">
                                 <div class="min-w-[128px] max-w-[128px] flex flex-col gap-2">
@@ -166,7 +167,8 @@
                                     <button class="px-2 bg-Blue text-Gray-b6 rounded-lg h-[32px]">Execute</button>
                                 </div>
                             </div>
-                        </el-collapse-item></el-collapse>
+                        </el-collapse-item>
+                    </el-collapse>
                     <div class=" flex-wrap md:flex-row flex-col gap-3 lg:flex hidden">
                         <div class="min-w-[128px] max-w-[128px] flex flex-col gap-2">
                             <label class="text-sm text-Gray-b4 font-normal">Start Balance</label>
@@ -233,6 +235,8 @@
 import Icon from '../Icon.vue';
 const { paperTradingChartOptions, paperTradingChartOptions2 } = useCharts();
 
+const activeAccordion1 = ref('1')
+const activeAccordion2 = ref('1')
 const filter = ref({
     balance: 0, duration: '', maxAsset: 3
 })
