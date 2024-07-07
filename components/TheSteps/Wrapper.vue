@@ -1,5 +1,5 @@
 <template>
-    <div class="flex items-start justify-center flex-col lg:max-h-[500px] h-full lg:p-8 p-4">
+    <div class="flex lg:items-start items-center justify-center flex-col lg:max-h-[500px] h-full lg:p-8 p-4 w-full">
         <div v-if="!isWellcomeShowed"><img src="/logo.svg" alt="hive" class="max-w-[200px]" /></div>
         <TheStepsStepsStepper class="my-6" v-if="!isWellcomeShowed" />
         <template v-if="currentStep == 0">
