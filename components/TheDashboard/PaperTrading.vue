@@ -139,8 +139,8 @@
                 </el-dropdown>
             </div>
             <div class="mt-6 grid grid-cols-4 items-center gap-6">
-                <div class="lg:col-span-3 col-span-4">
-                    <el-collapse class="block lg:hidden" v-model="activeAccordion2" accordion>
+                <div class="lg:col-span-3 col-span-4" :key="counter">
+                    <el-collapse class="block lg:hidden" v-model="activeAccordion2" accordion @change="counter++">
                         <el-collapse-item name="1">
                             <template #title>Filters</template>
                             <div class="flex flex-wrap md:flex-row flex-col gap-3">
@@ -235,8 +235,9 @@
 import Icon from '../Icon.vue';
 const { paperTradingChartOptions, paperTradingChartOptions2 } = useCharts();
 
-const activeAccordion1 = ref('1')
-const activeAccordion2 = ref('1')
+const activeAccordion1 = ref(null)
+const activeAccordion2 = ref(null)
+const counter = ref(0)
 const filter = ref({
     balance: 0, duration: '', maxAsset: 3
 })
