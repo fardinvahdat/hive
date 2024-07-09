@@ -25,7 +25,7 @@ export const useSidebarStore = defineStore("sidebar", () => {
     {
       label: "Profile",
       icon: "profile",
-      route: "/profile",
+      route: "/login",
     },
   ];
 

@@ -15,6 +15,9 @@
             </div>
             <BaseButton class="w-full disabled:bg-Gray-b5 disabled:text-Gray-b3"
                 :disabled="login.email == '' || login.password == ''">Login</BaseButton>
+            <p class="text-Gray-b2 font-normal text-sm">Don't Have Account? <NuxtLink to="/register"
+                    class="underline font-medium text-Blue">Register</NuxtLink>
+            </p>
         </form>
     </div>
 </template>
