@@ -32,6 +32,8 @@
         <template v-else-if="currentStep == 9">
             <TheStepsSteps1 :state="stepsOption[8]" />
         </template>
+
+        
         <footer class="flex items-center gap-6 justify-end h-10 w-full">
             <template v-if="currentStep != 0">
                 <button class="text-Gray-b5 font-medium text-sm border-none outline-none"
