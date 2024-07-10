@@ -4,7 +4,6 @@
         <NuxtLink to="/login"><img src="/icons/avatar.svg" class="h-10 w-10" /></NuxtLink>
     </div>
 </template>
-
 <script setup>
 
 </script>

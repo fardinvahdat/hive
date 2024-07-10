@@ -8,7 +8,8 @@
             <div class="w-full">
                 <input type="password" v-model="login.password"
                     class="w-full border-none outline-none bg-Gray-b5 rounded-lg px-2 py-2" placeholder="Password">
-                <NuxtLink class="text-sm font-normal cursor-pointer">Forget Your Password?</NuxtLink>
+                <NuxtLink class="text-sm font-normal cursor-pointer" to="/forget-password">Forget Your Password?
+                </NuxtLink>
             </div>
             <div class="mt-3 mb-1 w-full">
                 <el-checkbox v-model="login.isRememberable" label="Remember Account" fill="#F8C337" />
