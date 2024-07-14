@@ -104,3 +104,20 @@
         @apply text-Gray-b5
     }
 }
+.notifications{
+    &.el-popper{
+        @apply border-none #{!important};
+    }
+    .el-dropdown-menu{
+        @apply bg-Gray-b2
+    }
+    .el-popper__arrow:before{
+        @apply bg-Gray-b2 border-Gray-b2 #{!important};
+    }
+    .el-dropdown-menu__item{
+        @apply text-Gray-b5
+    }
+    .el-dropdown-menu__item:not(.is-disabled):focus, .el-dropdown-menu__item:not(.is-disabled):hover{
+        @apply bg-Gray-b1 text-Primary
+    }
+}
