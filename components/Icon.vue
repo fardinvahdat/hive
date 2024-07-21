@@ -503,6 +503,44 @@
                     fill="#CAD1DD" />
             </svg>
         </template>
+        <template v-else-if="name == 'attach'">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+                stroke="#000000">
+
+                <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC"
+                    stroke-width="0.39" />
+
+                <g id="SVGRepo_iconCarrier">
+                    <path
+                        d="M13.5 7.5L7.74264 13.2574C6.94699 14.053 5.86786 14.5 4.74264 14.5C2.3995 14.5 0.5 12.6005 0.5 10.2574C0.5 9.13214 0.946991 8.05301 1.74264 7.25736L7.67157 1.32843C8.20201 0.797993 8.92143 0.5 9.67157 0.5C11.2337 0.5 12.5 1.76633 12.5 3.32843C12.5 4.07857 12.202 4.79799 11.6716 5.32843L5.91421 11.0858C5.649 11.351 5.28929 11.5 4.91421 11.5C4.13316 11.5 3.5 10.8668 3.5 10.0858C3.5 9.71071 3.649 9.351 3.91421 9.08579L9.5 3.5"
+                        stroke="#E9E9EA" />
+                </g>
+
+            </svg>
+        </template>
+        <template v-else-if="name=='poll'">
+            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+            <!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
+            <svg width="25px" height="25px" viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M15.192 6H9.80802C7.42198 6.00717 5.49338 7.94696 5.50002 10.333V14.667C5.49338 17.053 7.42198 18.9928 9.80802 19H15.192C17.5781 18.9928 19.5067 17.053 19.5 14.667V10.333C19.5067 7.94696 17.5781 6.00717 15.192 6Z"
+                        stroke="#E9E9EA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M8.25 15.5C8.25 15.9142 8.58579 16.25 9 16.25C9.41421 16.25 9.75 15.9142 9.75 15.5H8.25ZM9.75 11.5C9.75 11.0858 9.41421 10.75 9 10.75C8.58579 10.75 8.25 11.0858 8.25 11.5H9.75ZM11.75 15.5C11.75 15.9142 12.0858 16.25 12.5 16.25C12.9142 16.25 13.25 15.9142 13.25 15.5H11.75ZM13.25 9.5C13.25 9.08579 12.9142 8.75 12.5 8.75C12.0858 8.75 11.75 9.08579 11.75 9.5H13.25ZM15.25 15.5C15.25 15.9142 15.5858 16.25 16 16.25C16.4142 16.25 16.75 15.9142 16.75 15.5H15.25ZM16.75 11.5C16.75 11.0858 16.4142 10.75 16 10.75C15.5858 10.75 15.25 11.0858 15.25 11.5H16.75ZM9.75 15.5V11.5H8.25V15.5H9.75ZM13.25 15.5V9.5H11.75V15.5H13.25ZM16.75 15.5V11.5H15.25V15.5H16.75Z"
+                        fill="#E9E9EA" />
+                </g>
+
+            </svg>
+        </template>
     </div>
 </template>
 
