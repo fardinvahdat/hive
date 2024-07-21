@@ -27,6 +27,11 @@ export const useSidebarStore = defineStore("sidebar", () => {
       icon: "profile",
       route: "/login",
     },
+    {
+      label: "Social Trading",
+      icon: "coins",
+      route: "/social-trading",
+    },
   ];
 
   return { list };
