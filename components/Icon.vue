@@ -520,7 +520,7 @@
 
             </svg>
         </template>
-        <template v-else-if="name=='poll'">
+        <template v-else-if="name == 'poll'">
             <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 
             <!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
@@ -539,6 +539,25 @@
                         fill="#E9E9EA" />
                 </g>
 
+            </svg>
+        </template>
+        <template v-else-if="name == 'column-up'">
+            <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 12H21M13 8H21M13 16H21M6 7V17M6 7L3 10M6 7L9 10" class="stroke-inherit" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </template>
+        <template v-else-if="name == 'column-down'">
+            <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 12H21M13 8H21M13 16H21M6 7V17M6 17L3 14M6 17L9 14" class="stroke-inherit" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </template>
+        <template v-else-if="name=='more-horizental'">
+            <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M12 12H12.01M12 6H12.01M12 18H12.01M13 12C13 12.5523 12.5523 13 12 13C11.4477 13 11 12.5523 11 12C11 11.4477 11.4477 11 12 11C12.5523 11 13 11.4477 13 12ZM13 18C13 18.5523 12.5523 19 12 19C11.4477 19 11 18.5523 11 18C11 17.4477 11.4477 17 12 17C12.5523 17 13 17.4477 13 18ZM13 6C13 6.55228 12.5523 7 12 7C11.4477 7 11 6.55228 11 6C11 5.44772 11.4477 5 12 5C12.5523 5 13 5.44772 13 6Z"
+                    stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
         </template>
     </div>
