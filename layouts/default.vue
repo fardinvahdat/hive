@@ -44,6 +44,7 @@
     <div class="h-screen w-screen flex items-center justify-center" v-else>
         <img src="/splash.png" class="max-w-[400px] object-contain" />
     </div>
+    <BaseDialogsWritePost />
 </template>
 
 <script setup>
@@ -52,6 +53,7 @@ const isLoaded = ref(false)
 onMounted(() => {
     isLoaded.value = true
 })
+
 </script>
 <style>
 .pwa-toast {

@@ -34,7 +34,7 @@
         <main class="mt-8">
             <p>
                 {{ !showMore && state.description.length > 50 ? state.description.slice(0, 50) : state.description }}
-                <a href="javascript:void(0)" @click="showMore = !showMore"
+                <a href="javascript:void(0)" @click="showMore = !showMore" v-if="state.description > 50"
                     class="text-Primary underline text-sm ml-2 whitespace-pre">{{ showMore ? 'Show Less' : 'Show More'
                     }}
                 </a>

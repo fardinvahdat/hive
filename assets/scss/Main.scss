@@ -139,3 +139,15 @@
   stroke-linecap: round;
   stroke-linejoin: round;
 }
+.el-dialog {
+  @apply max-w-[600px] w-[90%] bg-Gray-b2 rounded-lg #{!important};
+}
+.el-dialog__headerbtn .el-dialog__close {
+  @apply text-Gray-b6 text-2xl #{!important};
+}
+.el-dialog__headerbtn {
+  @apply top-2 #{!important};
+}
+.el-dialog__header {
+  @apply border-b-[1px] border-Gray-b3;
+}
