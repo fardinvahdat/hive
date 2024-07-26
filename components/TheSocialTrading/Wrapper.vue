@@ -2,8 +2,7 @@
     <div class="grid grid-cols-3 justify-center gap-6">
         <div class="xl:col-span-2 col-span-3 xl:order-1 order-2">
             <BaseWritePost />
-            <BasePostCard v-for="(item, index) in [ ...posts]" :key="index"
-                :state="item" />
+            <BasePostCard v-for="(item, index) in [...posts].reverse()" :key="index" :state="item" />
         </div>
         <div class="xl:col-span-1 col-span-3 order-1">
             <TheSocialTradingBigMovers />
