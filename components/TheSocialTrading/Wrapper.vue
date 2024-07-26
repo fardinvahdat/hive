@@ -7,6 +7,10 @@
         </div>
         <div class="xl:col-span-1 col-span-3 order-1">
             <TheSocialTradingBigMovers />
+            <p class="text-Gray-b4 text-sm font-medium my-4">Significant gainers and losers from your portfolio and all
+                your watchlists since •r,r• last trading day.
+            </p>
+            <TheSocialTradingInvestors />
         </div>
     </div>
 </template>
